@@ -49,14 +49,15 @@ $(document).ready(function(){
         hideSlide();
         findNext();
         showSlide();
-        timer = setTimeout(slideLoop, 3000);
-
-        $(".previous").click(function(){
+        timer = setTimeout(slideLoop, 3000);       
+    };
+	
+    slideLoop();
+    $(".previous").click(function(){
         clearTimeout(timer);
         hideSlide();
         findPrevious();
         showSlide();
-        //slideLoop();
         timer = setTimeout(slideLoop, 3000);
     });
 
@@ -65,7 +66,6 @@ $(document).ready(function(){
         hideSlide();
         findNext();
         showSlide();
-        slideLoop();
         timer = setTimeout(slideLoop, 3000);
     });
 
@@ -78,15 +78,6 @@ $(document).ready(function(){
             currentSlideId = slideId;
             showSlide();
         };
-        //slideLoop();
         timer = setTimeout(slideLoop, 3000);
-    });
-    };
-    slideLoop();
-    //var timer = setTimeout(slideLoop,3000);
-
-    
-
-    
-    
+    });    
 })
